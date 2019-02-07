@@ -31,6 +31,8 @@ public class Aquarium extends GFX {
 	 * Put a snail on the top of the tank.
 	 */
 	Snail algorithm = new Snail(177, Snail.HEIGHT+1, "top");
+	Fish nemo = new Fish(250, 250, Color.RED, false, true);
+	Fish nemo2 = new Fish(300, 400, Color.YELLOW, true, true);
 	
 	/**
 	 * This is a constructor, code that runs when we make a new Aquarium.
@@ -40,6 +42,9 @@ public class Aquarium extends GFX {
 		// Don't change this here, edit the variables instead.
 		super(WIDTH, HEIGHT);
 	}
+	
+	// SUMBARINE 
+	Submarine ringo = new Submarine(250, 250, Color.yellow);
 
 	int fish1X = getWidth() + 100;
 	int fish2X = getWidth() + 300;
@@ -49,21 +54,18 @@ public class Aquarium extends GFX {
 		// Draw the "ocean" background.
 		g.setColor(Color.blue);
 		g.fillRect(0, 0, getWidth(), getHeight());
-
-		// Draw the fish!
-		DrawFish.facingLeft(g, Color.yellow, fish1X, 200);
-		// Draw the confused fish!
-		DrawFish.facingRight(g, Color.green, fish2X, 300);
-
-		// What if we wanted this little fish to swim, too?
-		DrawFish.smallFacingLeft(g, Color.red, 200, 100);
 		
+		nemo.draw(g);
+		nemo2.draw(g);
 		// Draw our snail!
 		algorithm.draw(g);
 
 		// Move the fish!
 		fish1X -= 1;
 		fish2X -= 2;
+		
+		//Draws Submarine
+		ringo.draw(g);
 	}
 
 	public static void main(String[] args) {
