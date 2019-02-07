@@ -68,18 +68,18 @@ public class Snail {
 		
 		// Note that I need to compare strings with ".equals" this is a Java weirdness.
 		if ("bottom".equals(this.side)) {
-			drawSnail(position, Color.red, Color.white, Color.black);
+			drawSnail(position, Color.green, Color.white, Color.black);
 		} else if ("top".equals(this.side)) {
 			position.scale(-1, -1);
-			drawSnail(position, Color.red, Color.white, Color.black);
+			drawSnail(position, Color.green, Color.white, Color.black);
 		} else if ("left".equals(this.side)) { 
 			// Oh no, radians.
 			position.rotate(Math.PI/2);
-			drawSnail(position, Color.red, Color.white, Color.black);
+			drawSnail(position, Color.green, Color.white, Color.black);
 		} else { // we don't have to say "right" here.
 			// Oh no, radians.
 			position.rotate(-Math.PI/2);
-			drawSnail(position, Color.red, Color.white, Color.black);
+			drawSnail(position, Color.green, Color.white, Color.black);
 		}
 		
 		// It's OK if you forget this, Java will eventually notice, but better to have it!

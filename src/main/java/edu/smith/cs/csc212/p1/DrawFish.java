@@ -22,9 +22,9 @@ public class DrawFish {
 		// Draw the fish.
 		g.setColor(color);
 
-		Shape body = new Ellipse2D.Double(x - 40, y - 20, 80, 40);
-		Shape tail = new Ellipse2D.Double(x + 30, y - 30, 20, 60);
-		Shape eye = new Ellipse2D.Double(x - 15, y - 10, 10, 10);
+		Shape body = new Ellipse2D.Double(x - 13, y - 7, 27, 13);
+		Shape tail = new Ellipse2D.Double(x + 10, y - 10, 7, 20);
+		Shape eye = new Ellipse2D.Double(x - 5, y - 4, 4, 4);
 
 		g.fill(body);
 
